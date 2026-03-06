@@ -145,7 +145,8 @@
         </h2>
 
         <div class="grid grid-cols-2 sm:grid-cols-3 gap-2">
-          <a class="group block relative overflow-hidden rounded-lg" href="#">
+          <button type="button" class="group block relative overflow-hidden rounded-lg"
+            data-lightbox-src="https://images.unsplash.com/photo-1656618724305-a4257e46e847?q=80&w=1600&auto=format&fit=crop">
             <img class="w-full size-40 object-cover bg-gray-100 rounded-lg dark:bg-neutral-800"
               src="https://images.unsplash.com/photo-1656618724305-a4257e46e847?q=80&w=320&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
               alt="Screenshot">
@@ -161,9 +162,10 @@
                 <span class="text-xs">View</span>
               </div>
             </div>
-          </a>
+          </button>
 
-          <a class="group block relative overflow-hidden rounded-lg" href="#">
+          <button type="button" class="group block relative overflow-hidden rounded-lg"
+            data-lightbox-src="https://images.unsplash.com/photo-1616427592793-67b858804534?q=80&w=1600&auto=format&fit=crop">
             <img class="w-full size-40 object-cover bg-gray-100 rounded-lg dark:bg-neutral-800"
               src="https://images.unsplash.com/photo-1616427592793-67b858804534?q=80&w=320&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
               alt="Screenshot">
@@ -179,9 +181,10 @@
                 <span class="text-xs">View</span>
               </div>
             </div>
-          </a>
+          </button>
 
-          <a class="group block relative overflow-hidden rounded-lg" href="#">
+          <button type="button" class="group block relative overflow-hidden rounded-lg"
+            data-lightbox-src="https://images.unsplash.com/photo-1516131206008-dd041a9764fd?q=80&w=1600&auto=format&fit=crop">
             <img class="w-full size-40 object-cover bg-gray-100 rounded-lg dark:bg-neutral-800"
               src="https://images.unsplash.com/photo-1516131206008-dd041a9764fd?q=80&w=320&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
               alt="Screenshot">
@@ -197,7 +200,7 @@
                 <span class="text-xs">View</span>
               </div>
             </div>
-          </a>
+          </button>
         </div>
       </div>
       <!-- End Screenshots -->
@@ -314,8 +317,59 @@
   </footer>
   <!-- ========== END FOOTER ========== -->
 
+  <!-- Lightbox -->
+  <div id="lightbox" class="hidden fixed inset-0 z-50 flex items-center justify-center" style="background-color: rgba(0,0,0,0.85);" role="dialog" aria-modal="true">
+    <button id="lightbox-close" class="absolute top-4 right-4 text-3xl leading-none" style="color: rgba(255,255,255,0.85); line-height:1;" aria-label="Close">&times;</button>
+    <button id="lightbox-prev" class="absolute left-4 text-4xl leading-none px-2" style="color: rgba(255,255,255,0.85);" aria-label="Previous">&#8249;</button>
+    <img id="lightbox-img" src="" alt="Screenshot" class="max-h-[90vh] max-w-[90vw] rounded-lg shadow-2xl object-contain">
+    <button id="lightbox-next" class="absolute right-4 text-4xl leading-none px-2" style="color: rgba(255,255,255,0.85);" aria-label="Next">&#8250;</button>
+  </div>
+
   <!-- JS PLUGINS -->
   <script src="https://cdn.jsdelivr.net/npm/preline/dist/preline.min.js"></script>
+  <script>
+    (function () {
+      const lightbox = document.getElementById('lightbox');
+      const img = document.getElementById('lightbox-img');
+      const btnClose = document.getElementById('lightbox-close');
+      const btnPrev = document.getElementById('lightbox-prev');
+      const btnNext = document.getElementById('lightbox-next');
+
+      const thumbs = Array.from(document.querySelectorAll('[data-lightbox-src]'));
+      let current = 0;
+
+      function open(index) {
+        current = index;
+        img.src = thumbs[current].dataset.lightboxSrc;
+        lightbox.classList.remove('hidden');
+        document.body.style.overflow = 'hidden';
+      }
+
+      function close() {
+        lightbox.classList.add('hidden');
+        document.body.style.overflow = '';
+      }
+
+      function prev() { open((current - 1 + thumbs.length) % thumbs.length); }
+      function next() { open((current + 1) % thumbs.length); }
+
+      thumbs.forEach((el, i) => el.addEventListener('click', () => open(i)));
+      btnClose.addEventListener('click', close);
+      btnPrev.addEventListener('click', prev);
+      btnNext.addEventListener('click', next);
+
+      lightbox.addEventListener('click', function (e) {
+        if (e.target === lightbox) close();
+      });
+
+      document.addEventListener('keydown', function (e) {
+        if (lightbox.classList.contains('hidden')) return;
+        if (e.key === 'Escape') close();
+        else if (e.key === 'ArrowLeft') prev();
+        else if (e.key === 'ArrowRight') next();
+      });
+    })();
+  </script>
 </body>
 
 </html>
