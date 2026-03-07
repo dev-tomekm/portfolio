@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 
 <head>
@@ -95,7 +95,7 @@
         <h1 class="text-2xl font-medium text-gray-800 dark:text-neutral-200">
           Project Name
         </h1>
-        <p class="mt-2 text-sm text-gray-600 dark:text-neutral-400">
+        <p class="mt-6 mb-8 text-sm text-gray-600 dark:text-neutral-400">
           A brief tagline describing what this project does and why it matters.
         </p>
         <div class="mt-4 flex items-center gap-x-4">
@@ -223,7 +223,7 @@
       <!-- End Video -->
 
       <!-- Tech Stack -->
-      <div class="mt-10 sm:mt-14">
+      <div class="my-10 sm:mt-14">
         <h2 class="mb-5 font-medium text-gray-800 dark:text-neutral-200">
           Tech Stack
         </h2>
@@ -318,11 +318,39 @@
   <!-- ========== END FOOTER ========== -->
 
   <!-- Lightbox -->
-  <div id="lightbox" class="hidden fixed inset-0 z-50 flex items-center justify-center" style="background-color: rgba(0,0,0,0.85);" role="dialog" aria-modal="true">
-    <button id="lightbox-close" class="absolute top-4 right-4 text-3xl leading-none" style="color: rgba(255,255,255,0.85); line-height:1;" aria-label="Close">&times;</button>
-    <button id="lightbox-prev" class="absolute left-4 text-4xl leading-none px-2" style="color: rgba(255,255,255,0.85);" aria-label="Previous">&#8249;</button>
-    <img id="lightbox-img" src="" alt="Screenshot" class="max-h-[90vh] max-w-[90vw] rounded-lg shadow-2xl object-contain">
-    <button id="lightbox-next" class="absolute right-4 text-4xl leading-none px-2" style="color: rgba(255,255,255,0.85);" aria-label="Next">&#8250;</button>
+  <div
+    id="lightbox"
+    class="hidden fixed inset-0 z-50 p-2"
+    style="background-color: rgba(0, 0, 0, 0.85)"
+    role="dialog"
+    aria-modal="true">
+    <button
+      id="lightbox-close"
+      class="text-3xl leading-none"
+      style="position: absolute; top: 1rem; right: 1rem; color: rgba(255, 255, 255, 0.85); line-height: 1; z-index: 10"
+      aria-label="Close">
+      &times;
+    </button>
+    <button
+      id="lightbox-prev"
+      class="text-4xl leading-none px-2"
+      style="position: absolute; left: 1rem; top: 50%; transform: translateY(-50%); color: rgba(255, 255, 255, 0.85); z-index: 10"
+      aria-label="Previous">
+      &#8249;
+    </button>
+    <img
+      id="lightbox-img"
+      src=""
+      alt="Screenshot"
+      class="rounded-lg shadow-2xl object-contain"
+      style="max-height: calc(100vh - 1rem); max-width: calc(100vw - 1rem); position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);" />
+    <button
+      id="lightbox-next"
+      class="text-4xl leading-none px-2"
+      style="position: absolute; right: 1rem; top: 50%; transform: translateY(-50%); color: rgba(255, 255, 255, 0.85); z-index: 10"
+      aria-label="Next">
+      &#8250;
+    </button>
   </div>
 
   <!-- JS PLUGINS -->
