@@ -368,21 +368,21 @@
     <!-- Lightbox -->
     <div
       id="lightbox"
-      class="hidden fixed inset-0 z-50 flex items-center justify-center"
+      class="hidden fixed inset-0 z-50 p-2"
       style="background-color: rgba(0, 0, 0, 0.85)"
       role="dialog"
       aria-modal="true">
       <button
         id="lightbox-close"
-        class="absolute top-4 right-4 text-3xl leading-none"
-        style="color: rgba(255, 255, 255, 0.85); line-height: 1"
+        class="text-3xl leading-none"
+        style="position: absolute; top: 1rem; right: 1rem; color: rgba(255, 255, 255, 0.85); line-height: 1; z-index: 10"
         aria-label="Close">
         &times;
       </button>
       <button
         id="lightbox-prev"
-        class="absolute left-4 text-4xl leading-none px-2"
-        style="color: rgba(255, 255, 255, 0.85)"
+        class="text-4xl leading-none px-2"
+        style="position: absolute; left: 1rem; top: 50%; transform: translateY(-50%); color: rgba(255, 255, 255, 0.85); z-index: 10"
         aria-label="Previous">
         &#8249;
       </button>
@@ -390,11 +390,12 @@
         id="lightbox-img"
         src=""
         alt="Screenshot"
-        class="max-h-[90vh] max-w-[90vw] rounded-lg shadow-2xl object-contain" />
+        class="rounded-lg shadow-2xl object-contain"
+        style="max-height: calc(100vh - 1rem); max-width: calc(100vw - 1rem); display: block; margin: 0 auto;" />
       <button
         id="lightbox-next"
-        class="absolute right-4 text-4xl leading-none px-2"
-        style="color: rgba(255, 255, 255, 0.85)"
+        class="text-4xl leading-none px-2"
+        style="position: absolute; right: 1rem; top: 50%; transform: translateY(-50%); color: rgba(255, 255, 255, 0.85); z-index: 10"
         aria-label="Next">
         &#8250;
       </button>
