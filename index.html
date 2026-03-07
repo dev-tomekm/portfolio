@@ -87,10 +87,18 @@
     </script>
 
     <!-- CSS Preline -->
-     <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
     <link
       rel="stylesheet"
       href="https://preline.co/assets/css/main.min.css" />
+
+    <!-- Custom styles for anchor scrolling -->
+    <style>
+      html {
+        scroll-behavior: smooth;
+        scroll-padding-top: 120px;
+      }
+    </style>
   </head>
 
   <body class="dark:bg-neutral-900">
@@ -227,7 +235,7 @@
 
             <a
               class="py-0.5 md:py-3 px-4 md:px-1 border-s-2 md:border-s-0 md:border-b-2 border-gray-800 font-medium text-gray-800 focus:outline-none dark:border-neutral-200 dark:text-neutral-200"
-              href="#"
+              href="#content"
               aria-current="page"
               >Home</a
             >
@@ -369,14 +377,20 @@
                       stroke-width="2"
                       stroke-linecap="round"
                       stroke-linejoin="round">
-                      <circle cx="11" cy="11" r="8" />
+                      <circle
+                        cx="11"
+                        cy="11"
+                        r="8" />
                       <path d="m21 21-4.3-4.3" />
                     </svg>
                     <span class="text-xs">View</span>
                   </div>
                 </div>
               </div>
-              <p class="mt-1 p-2 text-xs text-gray-500 dark:text-neutral-500 group-hover:text-gray-800 group-hover:underline  dark:group-hover:text-neutral-200 transition-colors duration-300 truncate">A Million Miles</p>
+              <p
+                class="mt-1 p-2 text-xs text-gray-500 dark:text-neutral-500 group-hover:text-gray-800 group-hover:underline dark:group-hover:text-neutral-200 transition-colors duration-300 truncate">
+                A Million Miles
+              </p>
             </a>
 
             <a
@@ -401,14 +415,20 @@
                       stroke-width="2"
                       stroke-linecap="round"
                       stroke-linejoin="round">
-                      <circle cx="11" cy="11" r="8" />
+                      <circle
+                        cx="11"
+                        cy="11"
+                        r="8" />
                       <path d="m21 21-4.3-4.3" />
                     </svg>
                     <span class="text-xs">View</span>
                   </div>
                 </div>
               </div>
-              <p class="mt-1 p-2 text-xs text-gray-500 dark:text-neutral-500 group-hover:text-gray-800 group-hover:underline  dark:group-hover:text-neutral-200 transition-colors duration-300 truncate">DailyStream</p>
+              <p
+                class="mt-1 p-2 text-xs text-gray-500 dark:text-neutral-500 group-hover:text-gray-800 group-hover:underline dark:group-hover:text-neutral-200 transition-colors duration-300 truncate">
+                DailyStream
+              </p>
             </a>
 
             <a
@@ -433,14 +453,20 @@
                       stroke-width="2"
                       stroke-linecap="round"
                       stroke-linejoin="round">
-                      <circle cx="11" cy="11" r="8" />
+                      <circle
+                        cx="11"
+                        cy="11"
+                        r="8" />
                       <path d="m21 21-4.3-4.3" />
                     </svg>
                     <span class="text-xs">View</span>
                   </div>
                 </div>
               </div>
-              <p class="mt-1 p-2 text-xs text-gray-500 dark:text-neutral-500 group-hover:text-gray-800 group-hover:underline  dark:group-hover:text-neutral-200 transition-colors duration-300 truncate">EatMyPic</p>
+              <p
+                class="mt-1 p-2 text-xs text-gray-500 dark:text-neutral-500 group-hover:text-gray-800 group-hover:underline dark:group-hover:text-neutral-200 transition-colors duration-300 truncate">
+                EatMyPic
+              </p>
             </a>
 
             <a
@@ -465,14 +491,20 @@
                       stroke-width="2"
                       stroke-linecap="round"
                       stroke-linejoin="round">
-                      <circle cx="11" cy="11" r="8" />
+                      <circle
+                        cx="11"
+                        cy="11"
+                        r="8" />
                       <path d="m21 21-4.3-4.3" />
                     </svg>
                     <span class="text-xs">View</span>
                   </div>
                 </div>
               </div>
-              <p class="mt-1 p-2 text-xs text-gray-500 dark:text-neutral-500 group-hover:text-gray-800 group-hover:underline  dark:group-hover:text-neutral-200 transition-colors duration-300 truncate">Timeline Project</p>
+              <p
+                class="mt-1 p-2 text-xs text-gray-500 dark:text-neutral-500 group-hover:text-gray-800 group-hover:underline dark:group-hover:text-neutral-200 transition-colors duration-300 truncate">
+                Timeline Project
+              </p>
             </a>
           </div>
           <!-- End Image Grid -->
@@ -510,8 +542,12 @@
               </dt>
               <dd>
                 <ul>
-                  <li class="me-1 after:content-[','] inline-flex items-center text-sm text-gray-800 dark:text-neutral-200">Azure Cloud (App Services, Functions, APIM, EntraID)</li>
-                  <li class="me-1 after:content-[','] inline-flex items-center text-sm text-gray-800 dark:text-neutral-200">DevOps (CI/CD, Pipelines, Repos, IaC)</li>
+                  <li class="me-1 after:content-[','] inline-flex items-center text-sm text-gray-800 dark:text-neutral-200">
+                    Azure Cloud (App Services, Functions, APIM, EntraID)
+                  </li>
+                  <li class="me-1 after:content-[','] inline-flex items-center text-sm text-gray-800 dark:text-neutral-200">
+                    DevOps (CI/CD, Pipelines, Repos, IaC)
+                  </li>
                 </ul>
               </dd>
             </dl>
@@ -541,13 +577,11 @@
         <div class="my-10 sm:my-14">
           <h2 class="mb-5 font-medium text-gray-800 dark:text-neutral-200">Certificates</h2>
 
-          <ul class="list-disc ms-6 mt-3 ml-6 space-y-1.5" style="margin-left: 2rem;">
-            <li class="ps-1 text-sm text-gray-600 dark:text-neutral-400">
-              Microsoft Certified: Azure Solutions Architect Expert (AZ-305)
-            </li>
-            <li class="ps-1 text-sm text-gray-600 dark:text-neutral-400">
-              Microsoft Certified: Azure Developer Associate (AZ-204)
-            </li>
+          <ul
+            class="list-disc ms-6 mt-3 ml-6 space-y-1.5"
+            style="margin-left: 2rem">
+            <li class="ps-1 text-sm text-gray-600 dark:text-neutral-400">Microsoft Certified: Azure Solutions Architect Expert (AZ-305)</li>
+            <li class="ps-1 text-sm text-gray-600 dark:text-neutral-400">Microsoft Certified: Azure Developer Associate (AZ-204)</li>
           </ul>
         </div>
         <!-- End Certificates -->
@@ -994,6 +1028,85 @@
     <!-- ========== END FOOTER ========== -->
 
     <!-- JS Implementing Plugins -->
+
+    <!-- Navigation Active State Handler -->
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        // Get all navigation links
+        const navLinks = document.querySelectorAll('nav a[href]');
+        
+        // Active classes for the selected state
+        const activeClasses = ['border-gray-800', 'font-medium', 'text-gray-800', 'dark:border-neutral-200', 'dark:text-neutral-200'];
+        
+        // Inactive classes for the unselected state  
+        const inactiveClasses = ['border-transparent', 'text-gray-500', 'hover:text-gray-800', 'dark:text-neutral-400', 'dark:hover:text-neutral-200'];
+        
+        // Function to set a link as active
+        function setActive(link) {
+          // Remove inactive classes and add active classes
+          link.classList.remove(...inactiveClasses);
+          link.classList.add(...activeClasses);
+          link.setAttribute('aria-current', 'page');
+        }
+        
+        // Function to set a link as inactive
+        function setInactive(link) {
+          // Remove active classes and add inactive classes
+          link.classList.remove(...activeClasses);
+          link.classList.add(...inactiveClasses);
+          link.removeAttribute('aria-current');
+        }
+        
+        // Add click event listeners to navigation links
+        navLinks.forEach(link => {
+          // Skip the logo link
+          if (link.textContent.trim() === 'Portfolio') return;
+          
+          link.addEventListener('click', function(e) {
+            // Remove active state from all nav links
+            navLinks.forEach(navLink => {
+              if (navLink.textContent.trim() !== 'Portfolio') {
+                setInactive(navLink);
+              }
+            });
+            
+            // Set clicked link as active
+            setActive(this);
+          });
+        });
+        
+        // Handle initial state based on hash or default to home
+        function updateActiveStateOnLoad() {
+          const hash = window.location.hash;
+          let targetLink;
+          
+          if (hash === '#projects') {
+            targetLink = document.querySelector('a[href="#projects"]');
+          } else if (hash === '#content' || hash === '') {
+            // Home link or no hash - default to home
+            targetLink = document.querySelector('a[href="#content"]');
+          }
+          
+          if (targetLink) {
+            // Reset all links first
+            navLinks.forEach(navLink => {
+              if (navLink.textContent.trim() !== 'Portfolio') {
+                setInactive(navLink);
+              }
+            });
+            
+            // Set target link as active
+            setActive(targetLink);
+          }
+        }
+        
+        // Update active state on page load
+        updateActiveStateOnLoad();
+        
+        // Update active state when hash changes (e.g., back/forward browser buttons)
+        window.addEventListener('hashchange', updateActiveStateOnLoad);
+      });
+    </script>
 
     <!-- JS PLUGINS -->
     <!-- Required plugins -->
