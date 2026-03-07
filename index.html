@@ -92,6 +92,11 @@
       rel="stylesheet"
       href="https://preline.co/assets/css/main.min.css" />
 
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
+
     <!-- Custom styles for anchor scrolling -->
     <style>
       html {
@@ -523,14 +528,36 @@
               </dt>
               <dd>
                 <ul>
-                  <li class="me-1 after:content-[','] inline-flex items-center text-sm text-gray-800 dark:text-neutral-200">TypeScript</li>
-                  <li class="me-1 after:content-[','] inline-flex items-center text-sm text-gray-800 dark:text-neutral-200">JavaScript</li>
-                  <li class="me-1 after:content-[','] inline-flex items-center text-sm text-gray-800 dark:text-neutral-200">Angular</li>
-                  <li class="me-1 after:content-[','] inline-flex items-center text-sm text-gray-800 dark:text-neutral-200">React</li>
-                  <li class="me-1 after:content-[','] inline-flex items-center text-sm text-gray-800 dark:text-neutral-200">C#</li>
-                  <li class="me-1 after:content-[','] inline-flex items-center text-sm text-gray-800 dark:text-neutral-200">.NET</li>
-                  <li class="me-1 after:content-[','] inline-flex items-center text-sm text-gray-800 dark:text-neutral-200">API</li>
-                  <li class="me-1 after:content-[','] inline-flex items-center text-sm text-gray-800 dark:text-neutral-200">SQL/NoSQL</li>
+                  <li class="me-1 after:content-[','] inline-flex items-center text-sm text-gray-800 dark:text-neutral-200">
+                    <i class="devicon-typescript-plain mr-2 text-gray-700 dark:text-neutral-200"></i>
+                    TypeScript
+                  </li>
+                  <li class="me-1 after:content-[','] inline-flex items-center text-sm text-gray-800 dark:text-neutral-200">
+                    <i class="devicon-javascript-plain mr-2 text-gray-700 dark:text-neutral-200"></i>
+                    JavaScript
+                  </li>
+                  <li class="me-1 after:content-[','] inline-flex items-center text-sm text-gray-800 dark:text-neutral-200">
+                    <i class="devicon-angularjs-plain mr-2 text-gray-700 dark:text-neutral-200"></i>
+                    Angular
+                  </li>
+                  <li class="me-1 after:content-[','] inline-flex items-center text-sm text-gray-800 dark:text-neutral-200">
+                    <i class="devicon-react-original mr-2 text-gray-700 dark:text-neutral-200"></i>
+                    React
+                  </li>
+                  <li class="me-1 after:content-[','] inline-flex items-center text-sm text-gray-800 dark:text-neutral-200">
+                    <i class="devicon-csharp-plain mr-2 text-gray-700 dark:text-neutral-200"></i>
+                    C#
+                  </li>
+                  <li class="me-1 after:content-[','] inline-flex items-center text-sm text-gray-800 dark:text-neutral-200">
+                    <i class="devicon-dot-net-plain mr-2 text-gray-700 dark:text-neutral-200"></i>
+                    .NET
+                  </li>
+                  <li class="me-1 after:content-[','] inline-flex items-center text-sm text-gray-800 dark:text-neutral-200">
+                    <i class="devicon-openapi-plain mr-2 text-gray-700 dark:text-neutral-200"></i>
+                    API</li>
+                  <li class="me-1 after:content-[','] inline-flex items-center text-sm text-gray-800 dark:text-neutral-200">
+                    <i class="devicon-azuresqldatabase-plain mr-2 text-gray-700 dark:text-neutral-200"></i>
+                    SQL/NoSQL</li>
                   <li class="me-1 after:content-[','] inline-flex items-center text-sm text-gray-800 dark:text-neutral-200">AI Engineering</li>
                 </ul>
               </dd>
@@ -543,9 +570,11 @@
               <dd>
                 <ul>
                   <li class="me-1 after:content-[','] inline-flex items-center text-sm text-gray-800 dark:text-neutral-200">
+                    <i class="devicon-azure-plain mr-2 text-gray-700 dark:text-neutral-200"></i>
                     Azure Cloud (App Services, Functions, APIM, EntraID)
                   </li>
                   <li class="me-1 after:content-[','] inline-flex items-center text-sm text-gray-800 dark:text-neutral-200">
+                    <i class="devicon-azuredevops-plain mr-2 text-gray-700 dark:text-neutral-200"></i>
                     DevOps (CI/CD, Pipelines, Repos, IaC)
                   </li>
                 </ul>
@@ -580,8 +609,12 @@
           <ul
             class="list-disc ms-6 mt-3 ml-6 space-y-1.5"
             style="margin-left: 2rem">
-            <li class="ps-1 text-sm text-gray-600 dark:text-neutral-400">Microsoft Certified: Azure Solutions Architect Expert (AZ-305)</li>
-            <li class="ps-1 text-sm text-gray-600 dark:text-neutral-400">Microsoft Certified: Azure Developer Associate (AZ-204)</li>
+            <li class="ps-1 text-sm text-gray-600 dark:text-neutral-400">
+              <i class="devicon-windows11-plain mr-2 text-gray-700 dark:text-neutral-200"></i>
+              Azure Solutions Architect Expert (AZ-305)</li>
+            <li class="ps-1 text-sm text-gray-600 dark:text-neutral-400">
+              <i class="devicon-windows11-plain mr-2 text-gray-700 dark:text-neutral-200"></i>
+              Azure Developer Associate (AZ-204)</li>
           </ul>
         </div>
         <!-- End Certificates -->
@@ -1031,16 +1064,16 @@
 
     <!-- Navigation Active State Handler -->
     <script>
-      document.addEventListener('DOMContentLoaded', function() {
+      document.addEventListener('DOMContentLoaded', function () {
         // Get all navigation links
         const navLinks = document.querySelectorAll('nav a[href]');
-        
+
         // Active classes for the selected state
         const activeClasses = ['border-gray-800', 'font-medium', 'text-gray-800', 'dark:border-neutral-200', 'dark:text-neutral-200'];
-        
-        // Inactive classes for the unselected state  
+
+        // Inactive classes for the unselected state
         const inactiveClasses = ['border-transparent', 'text-gray-500', 'hover:text-gray-800', 'dark:text-neutral-400', 'dark:hover:text-neutral-200'];
-        
+
         // Function to set a link as active
         function setActive(link) {
           // Remove inactive classes and add active classes
@@ -1048,7 +1081,7 @@
           link.classList.add(...activeClasses);
           link.setAttribute('aria-current', 'page');
         }
-        
+
         // Function to set a link as inactive
         function setInactive(link) {
           // Remove active classes and add inactive classes
@@ -1056,53 +1089,53 @@
           link.classList.add(...inactiveClasses);
           link.removeAttribute('aria-current');
         }
-        
+
         // Add click event listeners to navigation links
-        navLinks.forEach(link => {
+        navLinks.forEach((link) => {
           // Skip the logo link
           if (link.textContent.trim() === 'Portfolio') return;
-          
-          link.addEventListener('click', function(e) {
+
+          link.addEventListener('click', function (e) {
             // Remove active state from all nav links
-            navLinks.forEach(navLink => {
+            navLinks.forEach((navLink) => {
               if (navLink.textContent.trim() !== 'Portfolio') {
                 setInactive(navLink);
               }
             });
-            
+
             // Set clicked link as active
             setActive(this);
           });
         });
-        
+
         // Handle initial state based on hash or default to home
         function updateActiveStateOnLoad() {
           const hash = window.location.hash;
           let targetLink;
-          
+
           if (hash === '#projects') {
             targetLink = document.querySelector('a[href="#projects"]');
           } else if (hash === '#content' || hash === '') {
             // Home link or no hash - default to home
             targetLink = document.querySelector('a[href="#content"]');
           }
-          
+
           if (targetLink) {
             // Reset all links first
-            navLinks.forEach(navLink => {
+            navLinks.forEach((navLink) => {
               if (navLink.textContent.trim() !== 'Portfolio') {
                 setInactive(navLink);
               }
             });
-            
+
             // Set target link as active
             setActive(targetLink);
           }
         }
-        
+
         // Update active state on page load
         updateActiveStateOnLoad();
-        
+
         // Update active state when hash changes (e.g., back/forward browser buttons)
         window.addEventListener('hashchange', updateActiveStateOnLoad);
       });
